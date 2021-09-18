@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 
-class Graph
+class bfs
 {
 	private int V; // No. of vertices
 	private LinkedList<Integer> adj[]; //Adjacency Lists
@@ -20,7 +20,7 @@ class Graph
 	// Function to add an edge into the graph
 	void addEdge(int v,int w)
 	{
-		adj[v].add(w);
+		adj[v].ad (w);
 	}
 
 	// prints BFS traversal from a given source s
