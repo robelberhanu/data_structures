@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 
-class bfs
+class Graph
 {
 	private int V; // No. of vertices
 	private LinkedList<Integer> adj[]; //Adjacency Lists
