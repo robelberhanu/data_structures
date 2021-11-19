@@ -4,11 +4,26 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args){
+        stack();
+        queues();
+       
+    }
 
-        // Stack = LIFO data structure. Last-In First-Out
-        //         stores objects into a sort of virtical tower
-        // push() method adds an item to the top of the stack
-        // pop() method removes an item from the top of the Stack
+    public static void stack(){
+
+         /* Stack = LIFO data structure. Last-In First-Out
+                stores objects into a sort of virtical tower
+                push() method adds an item to the top of the stack
+                pop() method removes an item from the top of the Stack
+
+            Uses of Stacks?
+            1. undo/redo features in text editors, browsers etc ..
+            2. to move back/forward through browser history
+            3. backtracking algorithms (maze, file directories)
+            4. calling functions (call stack)
+         
+        */
+        
 
         Stack<String> stack = new Stack<String>();
 
@@ -30,7 +45,43 @@ public class Main {
         System.out.println("Unremoved Top Item: " + stack.peek()); // ckeck top most object without removing it.
 
         // Search an Item with in the stack. Pass object as arguements. Returns the position of the item. -1 returned if item not found.
-        System.out.println("Object Position: " + stack.search("Robel"));
+        System.out.println("Object Position: " + stack.search("Robel"));        
+
+
+    }
+
+    public static void queues(){
+
+        /* Queue = FIFO data structure. First-In First-out
+                   A collection designed for holding elements prior to processing linear data structure
+
+                   add = enqueue, offer()
+                   remove = dequeued, poll()
+            Queues inherit properties of the Collections class. 
+
+            Where can we use Queues ?
+
+            1. Keyboard buffer(letters should appear on the screen in the order they're pressed)
+            2. printer Queue (Print jobs should be completed in order)
+            3. Used in LinkedLists, PriorityQueues, Breath-first Search
+        
+        */
+
+        Queue<String> queue = new LinkedList<String>(); // we used a linked list because a Queue is an interface and not a class. Hence why we cannot intsantiate objects.
+        
+        // Add Items to the tail of the queue.  
+        queue.offer("karen");
+        queue.offer("Chad");
+        queue.offer("Steve");
+        queue.offer("Harold");
+        
+        System.out.println("The Queue: " + queue); //output queue
+        System.out.println("Item at the head: " + queue.peek()); //look at or examine object at the head of the queue.
+
+
+        // Remove Items from the head of the queues
+        queue.poll();
+        System.out.println("The Queue: " + queue); //output queue
 
     }
     
