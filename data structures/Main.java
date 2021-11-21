@@ -4,8 +4,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args){
-        stack();
-        queues();
+        // stack();
+        // queues();
+        PQueue();
        
     }
 
@@ -57,14 +58,7 @@ public class Main {
 
                    add = enqueue, offer()
                    remove = dequeued, poll()
-            Queues inherit properties of the Collections class. 
-
-            Where can we use Queues ?
-
-            1. Keyboard buffer(letters should appear on the screen in the order they're pressed)
-            2. printer Queue (Print jobs should be completed in order)
-            3. Used in LinkedLists, PriorityQueues, Breath-first Search
-        
+            Queues inherit properties of the Collections class.         
         */
 
         Queue<String> queue = new LinkedList<String>(); // we used a linked list because a Queue is an interface and not a class. Hence why we cannot intsantiate objects.
@@ -82,6 +76,58 @@ public class Main {
         // Remove Items from the head of the queues
         queue.poll();
         System.out.println("The Queue: " + queue); //output queue
+
+       /* Where can we use Queues ?
+
+        1. Keyboard buffer(letters should appear on the screen in the order they're pressed)
+        2. printer Queue (Print jobs should be completed in order)
+        3. Used in LinkedLists, PriorityQueues, Breath-first Search*/
+
+    }
+
+    public static void PQueue(){
+
+        // Normal Queue
+        Queue<Double> gpa = new LinkedList<Double>();
+
+        gpa.offer(3.0);
+        gpa.offer(2.5);
+        gpa.offer(4.0);
+        gpa.offer(1.5);
+        gpa.offer(2.0);
+
+    
+        // A PriorityQueue
+        Queue<Double> Pgpa = new PriorityQueue<Double>();
+        Queue<Double> RPgpa = new PriorityQueue<Double>(Collections.reverseOrder());
+        Queue<String> SPgpa = new PriorityQueue<String>();
+
+
+
+        Pgpa.offer(3.0);
+        Pgpa.offer(2.5);
+        Pgpa.offer(4.0);
+        Pgpa.offer(1.5);
+        Pgpa.offer(2.0);
+
+        RPgpa.offer(3.0);
+        RPgpa.offer(2.5);
+        RPgpa.offer(4.0);
+        RPgpa.offer(1.5);
+        RPgpa.offer(2.0);
+
+        SPgpa.offer("A");
+        SPgpa.offer("R");
+        SPgpa.offer("C");
+        SPgpa.offer("B");
+        SPgpa.offer("L");
+
+        while(!Pgpa.isEmpty()){
+            // System.out.println(gpa.poll());
+            System.out.println(Pgpa.poll());
+            // System.out.println("Unreversed String PriorityQueue" + SPgpa.poll());
+
+        }
 
     }
     
