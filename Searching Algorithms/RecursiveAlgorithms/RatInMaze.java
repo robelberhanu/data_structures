@@ -110,6 +110,4 @@ public class RatMaze {
 		rat.solveMaze(maze);
 	}
 }
- class RatInMaze {
-    
-}
+ 
